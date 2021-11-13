@@ -231,7 +231,7 @@ def UrlFixer(original_url):
     original_url = original_url.strip()
     url = ""
     path = "/"
-    port = 22
+    port = 80
     protocol = "http"
     if original_url[:7] == "http://":
         url = original_url[7:]
