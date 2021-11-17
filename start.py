@@ -1215,11 +1215,35 @@ def downloadsocks(choice):
     if choice == "1":
         f = open(out_file, 'wb')
         try:
-            r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=http&country=all",
+            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=1&order=jiance",
                              timeout=5)
             f.write(r.content)
             
         except:
+        try:
+            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=2&order=jiance",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:
+        try:
+            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=1&order=xiangying",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:
+        try:
+            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=2&order=xiangying",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:
+        try:
+            r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=http&country=all",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:        
             pass
         try:
             r = requests.get("https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt",
