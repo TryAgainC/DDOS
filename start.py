@@ -1220,24 +1220,28 @@ def downloadsocks(choice):
             f.write(r.content)
             
         except:
+            pass
         try:
             r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=2&order=jiance",
                              timeout=5)
             f.write(r.content)
             
         except:
+            pass
         try:
             r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=1&order=xiangying",
                              timeout=5)
             f.write(r.content)
             
         except:
+            pass
         try:
             r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=2&order=xiangying",
                              timeout=5)
             f.write(r.content)
             
         except:
+            pass
         try:
             r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=http&country=all",
                              timeout=5)
