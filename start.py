@@ -1303,6 +1303,18 @@ def downloadsocks(choice):
         except:
             pass
         try:
+            r = requests.get("https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt", timeout=5)
+            f.write(r.content)
+           
+        except:
+            pass  
+        try:
+            r = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http%2Bhttps.txt", timeout=5)
+            f.write(r.content)
+           
+        except:
+            pass            
+        try:
             r = requests.get("https://raw.githubusercontent.com/TryAgainC/myproxy/main/http.txt", timeout=5)
             f.write(r.content)
            
