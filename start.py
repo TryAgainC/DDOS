@@ -1121,37 +1121,11 @@ def downloadsocks(choice):
         except:
             pass
         try:
-            r = requests.get(
-                "http://ip.qingproxy.xyz/mf.php",
-                timeout=5)
-            f.write(r.content)
-        except:
-            pass
-        try:
             r = requests.get("https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt", timeout=5)
             f.write(r.content)
             f.close()
         except:
             f.close()
-        try:
-
-            req = requests.get("https://www.socks-proxy.net/", timeout=5, headers={"User-Agent", UserAgent}).text
-            part = str(req)
-            part = part.split("<tbody>")
-            part = part[1].split("</tbody>")
-            part = part[0].split("<tr><td>")
-            proxies = ""
-            for proxy in part:
-                proxy = proxy.split("</td><td>")
-                try:
-                    proxies = proxies + proxy[0] + ":" + proxy[1] + "\n"
-                except:
-                    pass
-                out_file = open(out_file, "a")
-                out_file.write(proxies)
-                out_file.close()
-        except:
-            pass
     if choice == "5":
         f = open(out_file, 'wb')
         try:
