@@ -1105,11 +1105,29 @@ def downloadsocks(choice):
     if choice == "4":
         f = open(out_file, 'wb')
         try:
+            r = requests.get("https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass        
+        try:
             r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=socks4&country=all",
                              timeout=5)
             f.write(r.content)
         except:
             pass
+        try:
+            r = requests.get("https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass            
+        try:
+            r = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass            
         try:
             r = requests.get("https://www.proxy-list.download/api/v1/get?type=socks4", timeout=5)
             f.write(r.content)
@@ -1128,6 +1146,30 @@ def downloadsocks(choice):
             f.close()
     if choice == "5":
         f = open(out_file, 'wb')
+        try:
+            r = requests.get("https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass           
+        try:
+            r = requests.get("https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass        
+        try:
+            r = requests.get("https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass
+        try:
+            r = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
+                             timeout=5)
+            f.write(r.content)
+        except:
+            pass            
         try:
             r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=socks5&country=all",
                              timeout=5)
@@ -1246,6 +1288,13 @@ def downloadsocks(choice):
             pass
         try:
             r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=http&country=all",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:        
+            pass
+        try:
+            r = requests.get("https://sunny9577.github.io/proxy-scraper/proxies.txt",
                              timeout=5)
             f.write(r.content)
             
