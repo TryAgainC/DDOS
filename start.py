@@ -1308,6 +1308,20 @@ def downloadsocks(choice):
         except:
             pass    
         try:
+            r = requests.get("https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:
+            pass 
+        try:
+            r = requests.get("https://proxy11.com/api/proxy.txt?key=NDEwNw.YZpAUA.S7BEtWUmtY9p-SoOD8PHAuq4_Do",
+                             timeout=5)
+            f.write(r.content)
+            
+        except:
+            pass 
+        try:
             r = requests.get("https://www.proxy-list.download/api/v1/get?type=http", timeout=5)
             f.write(r.content)
            
