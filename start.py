@@ -1259,28 +1259,14 @@ def downloadsocks(choice):
         except:
             pass            
         try:
-            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=1&order=jiance",
+            r = requests.get("https://www.padaili.com/proxyapi?api=qhjWLqjQZGs1IJcMd86iEwChumQYUrs3&num=1000&type=3&order=jiance",
                              timeout=5)
             f.write(r.content)
             
         except:
             pass
         try:
-            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=2&order=jiance",
-                             timeout=5)
-            f.write(r.content)
-            
-        except:
-            pass
-        try:
-            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=1&order=xiangying",
-                             timeout=5)
-            f.write(r.content)
-            
-        except:
-            pass
-        try:
-            r = requests.get("https://www.padaili.com/proxyapi?api=hDAWKD0nD9y0qSmZdpiBgJewniN7WbhX&num=1000&type=2&order=xiangying",
+            r = requests.get("https://www.padaili.com/proxyapi?api=qhjWLqjQZGs1IJcMd86iEwChumQYUrs3&num=1000&type=3&order=xiangying",
                              timeout=5)
             f.write(r.content)
             
