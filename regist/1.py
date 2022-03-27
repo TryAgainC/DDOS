@@ -4,8 +4,6 @@ import time
 import threading
 
 def regist():
-    proxies = {'http': "182.34.136.205:25624",
-               'https': "120.220.220.95:8085"}
     url = "https://72vpn.xyz/api/v1/passport/auth/register"
     qq_num = random.randint(1,9999999999)
 
@@ -19,7 +17,7 @@ def regist():
         'invite_code': 'xiaoxin'
     }
 
-    r = requests.post(url=url,data=data,peoxies=proxies)
+    r = requests.post(url=url,data=data)
     print(qq_email,qq_password,r)
 
 
