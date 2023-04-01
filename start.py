@@ -1209,14 +1209,14 @@ def downloadsocks(choice):
         try:
             r = requests.get(
                 "http://api.rawhub.net/free/alive.txt",
-                timeout=15)
+                timeout=5)
             f.write(r.content)
         except:
             pass
         try:
             r = requests.get(
-                "https://freeamp.booter.top/9527/proxy.txt",
-                timeout=15)
+                "https://www.my-proxy.com/free-socks-5-proxy.html",
+                timeout=5)
             f.write(r.content)
         except:
             pass            
@@ -1225,7 +1225,78 @@ def downloadsocks(choice):
                 "https://gist.githubusercontent.com/Azuures/1e0cb7a1097c720b4ed2aa63acd82179/raw/97d2d6a11873ffa8ca763763f7a5dd4035bcf95f/fwefnwex",
                 timeout=5)
             f.write(r.content)
-            f.close()
+        except:
+            pass     
+        try:
+            r = requests.get(
+                "https://www.proxy-list.download/api/v1/get?type=socks5",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass  
+        try:
+            r = requests.get(
+                "https://www.freeproxychecker.com/result/socks5_proxies.txt",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass  
+        try:
+            r = requests.get(
+                "http://www.socks24.org/feeds/posts/default",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass  
+        try:
+            r = requests.get(
+                "http://worm.rip/socks5.txt",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass  
+        try:
+            r = requests.get(
+                "https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/socks.txt",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass  
+        try:
+            r = requests.get(
+                "https://api.proxyscrape.com/?request=displayproxies&proxytype=socks5",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass  
+        try:
+            r = requests.get(
+                "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass
+        try:
+            r = requests.get(
+                "https://api.proxyscrape.com/?request=displayproxies&proxytype=socks5",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass
+        try:
+            r = requests.get(
+                "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all&simplified=true",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass
+        try:
+            r = requests.get(
+                "https://raw.githubusercontent.com/manuGMG/proxy-365/main/SOCKS5.txt",
+                timeout=5)
+            f.write(r.content)
+        except:
+            pass
         except:
             f.close()
     if choice == "1":
