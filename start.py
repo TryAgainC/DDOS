@@ -1296,8 +1296,6 @@ def downloadsocks(choice):
                 timeout=5)
             f.write(r.content)
         except:
-            pass
-        except:
             f.close()
     if choice == "1":
         f = open(out_file, 'wb')
