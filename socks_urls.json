@@ -50,6 +50,7 @@
     ],
     "http": [
         "http://api.89ip.cn/tqdl.html?api=1&num=5000&port=&address=&isp=",
+        "https://wwwkill.site/proxy.txt",
         "https://api.proxyscrape.com/?request=displayproxies&proxytype=http&country=all",
         "https://sunny9577.github.io/proxy-scraper/proxies.txt",
         "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt",
@@ -87,19 +88,6 @@
         "http://spys.me/proxy.txt",
         "https://sheesh.rip/http.txt",
         "http://worm.rip/http.txt",
-        "http://www.proxyserverlist24.top/feeds/posts/default",
-        "https://www.my-proxy.com/free-anonymous-proxy.html",
-        "https://www.my-proxy.com/free-transparent-proxy.html",
-        "https://www.my-proxy.com/free-proxy-list.html",
-        "https://www.my-proxy.com/free-proxy-list-2.html",
-        "https://www.my-proxy.com/free-proxy-list-3.html",
-        "https://www.my-proxy.com/free-proxy-list-4.html",
-        "https://www.my-proxy.com/free-proxy-list-5.html",
-        "https://www.my-proxy.com/free-proxy-list-6.html",
-        "https://www.my-proxy.com/free-proxy-list-7.html",
-        "https://www.my-proxy.com/free-proxy-list-8.html",
-        "https://www.my-proxy.com/free-proxy-list-9.html",
-        "https://www.my-proxy.com/free-proxy-list-10.html",
         "https://www.freeproxychecker.com/result/http_proxies.txt"
     ]
 }
