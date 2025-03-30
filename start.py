@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import json
+from concurrent.futures import ThreadPoolExecutor
 
 l7 = ["CFB", "BYPASS", "GET", "POST", "OVH", "STRESS", "OSTRESS", "DYN", "SLOW", "HEAD", "HIT", "NULL", "COOKIE",
       "BRUST", "PPS", "EVEN", "GSB", "DGB", "AVB"]
@@ -1141,14 +1142,36 @@ def downloadsocks(choice, json_file="socks_urls.json"):
         print(f"No URLs found for {sock_type}")
         return
 
-    f = open(out_file, 'wb')
-    for url in urls:
+    # 使用多线程下载
+    def download_url(url):
         try:
-            r = requests.get(url, timeout=5)
-            f.write(r.content)
+            response = requests.get(url, timeout=5)
+            if response.status_code == 200:
+                return response.text
+            else:
+                print(f"Failed to download from {url}: Status code {response.status_code}")
+                return ""
         except Exception as e:
             print(f"Failed to download from {url}: {e}")
-    f.close()
+            return ""
+
+    # 创建线程池
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        futures = [executor.submit(download_url, url) for url in urls]
+        results = []
+        for future in futures:
+            result = future.result()
+            if result:
+                results.append(result)
+
+    # 将所有下载的内容合并并写入文件
+    if results:
+        content = "\n".join(results)
+        with open(out_file, 'w') as f:
+            f.write(content)
+        print(f"Downloaded {len(results)} proxy lists to {out_file}")
+    else:
+        print("No proxy lists downloaded.")
 
 def main():
     global proxies, multiple, choice, timer, out_file
