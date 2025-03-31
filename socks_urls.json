@@ -35,17 +35,6 @@
         "http://worm.rip/socks5.txt"
     ],
     "http": [
-        "http://api.89ip.cn/tqdl.html?api=1&num=5000&port=&address=&isp=",
-        "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
-        "https://sunny9577.github.io/proxy-scraper/proxies.txt",
-        "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
-        "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
-        "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt",
-        "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-        "https://raw.githubusercontent.com/TryAgainC/myproxy/main/http.txt",
-        "https://www.proxy-list.download/api/v1/get?type=http",
-        "https://proxy11.com/api/proxy.txt?key=NDEwNw.YZpAUA.S7BEtWUmtY9p-SoOD8PHAuq4_Do",
-        "https://api.proxyscrape.com/?request=displayproxies&proxytype=http&country=all",
-        "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt"
+        "https://raw.githubusercontent.com/TryAgainC/myproxy/refs/heads/main/http.txt"
     ]
 }
